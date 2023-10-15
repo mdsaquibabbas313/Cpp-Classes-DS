@@ -64,20 +64,58 @@ void display(node* head) {
 	
 }
 
+void deleteAthead(node* &head) {
+    
+    if(head == NULL) {
+        
+        cout << "Stack Is Empty" << endl;
+        return ;
+        
+    } 
+    
+    
+    if(head->next == NULL) {
+        
+        head = NULL;
+        return ;
+        
+    }
+    
+    
+    else {
+        
+        
+        head=head->next;    
+        
+        return ;
+    }
+    
+    
+    
+    
+    
+}
+
 
 int main() {
 	node* head = NULL;
 	insertTail(head , 1);
 	insertTail(head , 2);
 	insertTail(head , 3);
-	display(head);
+// 	display(head);
 	insertAtHead(head , 1);
 	insertAtHead(head , 2);
 	insertAtHead(head , 3);
 	display(head);
 	
-	cout << search(head , 3) << endl;
-	cout << search(head , 7) << endl;
+// 	cout << search(head , 3) << endl;
+// 	cout << search(head , 7) << endl;
+    deleteAthead(head);
+    deleteAthead(head);
+   
+    display(head);
+
+    
 	
 	
 	return 0;
