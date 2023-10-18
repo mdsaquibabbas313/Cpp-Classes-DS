@@ -3,7 +3,7 @@ using namespace std;
 
 int main(){
 
-	/*public:
+	public:
 	//Function to return list containing vertices in Topological order.
 	void dfs(int node , int vis[] , stack<int>&st , vector<int> adj[]) {
 	    vis[node] = 1;
@@ -68,19 +68,6 @@ int main(){
 	    }
 	    
 	    return topo;
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        */
-
 
 
     return 0;
