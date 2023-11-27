@@ -1,5 +1,5 @@
 #include<iostream>
-// #include<bits/stdc++.h>
+#include<bits/stdc++.h>
 #define N 3
 using namespace std;
 
@@ -15,6 +15,10 @@ class node{
 };
 
 void dequeue(node* &front) {
+    if(front == nullptr) {
+        cout << "Queue is Empty Sanad" << endl;
+        return ;
+    }
 	node* to_delete = front;
 	front = front->next;
 	delete(to_delete);
@@ -39,18 +43,28 @@ void display(node* front) {
 		cout << temp -> data << "->";
 		temp=temp->next;
 	}
+	cout << "NULL" << endl;
 	cout << endl;
 }
 
 
 int main() {
-	node* front = NULL , rear = NULL;
+	node* front = NULL ;
+	node* rear = NULL;
 	
 	enqueue(front , rear , 2);
 	enqueue(front , rear , 3);
 	enqueue(front , rear , 5);
 	enqueue(front , rear , 6);
 	enqueue(front , rear , 1);
-	
+// 	display(front);
+	dequeue(front);
+
+    dequeue(front);
+    dequeue(front);
+    dequeue(front);
+    dequeue(front);
+    dequeue(front);
+    	
 	return 0;
 }
